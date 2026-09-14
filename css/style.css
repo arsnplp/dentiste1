@@ -2507,3 +2507,19 @@ section.bg-grey  { background: var(--c-paper-alt); border-top: 0; }
   border: 1px solid var(--c-line);
   margin: -1px 0 0 -1px;
 }
+
+/* "En bref" et "3 facons de prendre RDV" : le fond gris de la grille
+   debordait dans les marges laterales. Bordures posees sur chaque case. */
+.facts__inner,
+.ways__inner {
+  background: transparent;
+  border: 0;
+  gap: 0;
+  padding-top: 1px;
+  padding-left: calc(var(--gutter) + 1px);
+}
+.facts__inner > .fact,
+.ways__inner > .way {
+  border: 1px solid var(--c-line);
+  margin: -1px 0 0 -1px;
+}
