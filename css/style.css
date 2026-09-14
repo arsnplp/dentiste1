@@ -2523,3 +2523,26 @@ section.bg-grey  { background: var(--c-paper-alt); border-top: 0; }
   border: 1px solid var(--c-line);
   margin: -1px 0 0 -1px;
 }
+
+/* Galerie de l'accueil : photos avant / apres plus grandes */
+@media (min-width: 981px) {
+  .gallery__inner {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: clamp(32px, 4vw, 64px);
+  }
+}
+
+/* Galerie de l'accueil : fleches posees sur les photos pour leur laisser
+   toute la largeur de la colonne */
+.gallery .carousel { gap: 0; }
+
+.gallery .carousel__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, .35);
+}
+.gallery .carousel__arrow--prev { left: 16px; }
+.gallery .carousel__arrow--next { right: 16px; }
+.gallery .carousel__arrow:hover { transform: translateY(-50%) scale(1.06); }
