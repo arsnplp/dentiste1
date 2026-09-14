@@ -10,8 +10,9 @@
   --c-ink:        #2e2e2e;   /* texte principal : gris anthracite */
   --c-ink-soft:   #5c5c5c;   /* texte secondaire : gris de la section cabinet */
   --c-deep:       #5c5c5c;   /* fonds sombres : meme gris */
-  --c-paper:      #fbfaf7;   /* blanc cassé */
-  --c-paper-alt:  #f2efe9;   /* beige clair */
+  --c-paper:      #ffffff;   /* blanc */
+  --c-paper-alt:  #e6e6e6;   /* gris clair */
+  --c-rose:       #ffdbe9;   /* rose (palette, pas encore utilise) */
   --c-accent:     #98c4ff;   /* bleu ciel */
   --c-accent-dk:  #7fb2f5;   /* survol : meme bleu, un ton plus soutenu */
   --c-line:       rgba(0, 0, 0, .10);
@@ -610,7 +611,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   aspect-ratio: 16 / 10;
   border: 1px solid var(--c-line);
   background:
-    radial-gradient(120% 90% at 20% 15%, #ffffff 0%, #e9e6e0 55%, #d7d2ca 100%);
+    radial-gradient(120% 90% at 20% 15%, #ffffff 0%, #e8e8e8 55%, #d4d4d4 100%);
 }
 
 /* --- responsive soins --- */
@@ -651,7 +652,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .portrait__img {
   aspect-ratio: 4 / 5;
-  background: linear-gradient(165deg, #e3ded6 0%, #cfc9c0 60%, #bdb6ac 100%);
+  background: linear-gradient(165deg, #e0e0e0 0%, #cacaca 60%, #b8b8b8 100%);
   border: 1px solid var(--c-line);
 }
 
@@ -1106,7 +1107,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .post__media {
   aspect-ratio: 16 / 10;
-  background: radial-gradient(120% 90% at 25% 20%, #ffffff 0%, #e9e6e0 55%, #d6d1c9 100%);
+  background: radial-gradient(120% 90% at 25% 20%, #ffffff 0%, #e8e8e8 55%, #d3d3d3 100%);
   border-bottom: 1px solid var(--c-line);
 }
 
@@ -1804,7 +1805,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .feature__media {
   aspect-ratio: 16 / 10;
-  background: radial-gradient(120% 90% at 25% 20%, #ffffff 0%, #e7e3dc 55%, #d2cdc4 100%);
+  background: radial-gradient(120% 90% at 25% 20%, #ffffff 0%, #e5e5e5 55%, #cfcfcf 100%);
 }
 
 .feature__body { padding: clamp(24px, 3vw, 44px) clamp(24px, 3vw, 44px) clamp(24px, 3vw, 44px) 0; }
@@ -2460,3 +2461,49 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .footer__hours span { display: block; min-width: 0; margin-bottom: 2px; }
 .footer__hours span:empty { display: none; }
 .footer__hours li + li:not(.is-closed) { margin-top: -4px; }
+
+/* ---------- 23. Alternance des fonds de section ---------- */
+/* Une section sur deux : blanc / gris clair. Les classes sont posees
+   dans le HTML ; les sections a fond propre (image, avant/apres, CTA)
+   ne sont pas concernees. */
+section.bg-white { background: var(--c-paper); border-top: 0; }
+section.bg-grey  { background: var(--c-paper-alt); border-top: 0; }
+
+/* cartes et encarts : toujours blancs, ils ressortent sur le gris */
+.bg-grey .step,
+.bg-grey .alert,
+.bg-grey .payinfo li,
+.bg-grey .equip li,
+.bg-grey .pcard,
+.bg-grey .post,
+.bg-grey .rel,
+.bg-grey .route,
+.bg-grey .mapsec__routes,
+.bg-grey .scard,
+.bg-grey .langs__list li { background: var(--c-paper); }
+
+.bg-white .step,
+.bg-white .alert,
+.bg-white .payinfo li { background: var(--c-paper); }
+
+.bg-grey .timeline li::before { background: var(--c-paper-alt); }
+.bg-white .timeline li::before { background: var(--c-paper); }
+
+.bg-grey .route:hover,
+.bg-grey .rel:hover { background: var(--c-paper-alt); }
+
+/* "En bref" : cases blanches filetees sur fond blanc (plus de bande grise) */
+.bg-white .fact { background: var(--c-paper); }
+
+/* "Les autres soins" : bordures par case, les cases vides de la
+   derniere ligne restent transparentes au lieu de se remplir de gris */
+.related__grid {
+  background: transparent;
+  border: 0;
+  gap: 0;
+  padding: 1px 0 0 1px;
+}
+.related__grid .rel {
+  border: 1px solid var(--c-line);
+  margin: -1px 0 0 -1px;
+}
