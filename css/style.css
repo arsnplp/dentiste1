@@ -1,5 +1,5 @@
 /* =========================================================
-   Cabinet dentaire — feuille de style principale
+   Cabinet dentaire : feuille de style principale
    1. Variables      2. Reset      3. Topbar
    4. Nav            5. Bandeaux   6. Responsive
    ========================================================= */
@@ -1054,7 +1054,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .blog__grid {
   display: grid;
   /* auto-fill : les colonnes restent en place meme quand le filtre masque
-     des articles — une carte seule garde donc la meme largeur que les autres */
+     des articles : une carte seule garde donc la meme largeur que les autres */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: clamp(22px, 2.4vw, 38px);
 }

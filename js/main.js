@@ -1,4 +1,4 @@
-/* Carrousel avant / après — défilement simple, une slide à la fois */
+/* Carrousel avant / après : défilement simple, une slide à la fois */
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const track  = carousel.querySelector('[data-track]');
   const slides = track.children.length;
@@ -17,7 +17,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   carousel.querySelector('[data-next]').addEventListener('click', () => go(1));
 });
 
-/* Soins et traitements — onglets + navigation par fleches */
+/* Soins et traitements : onglets + navigation par fleches */
 (() => {
   const section = document.querySelector('.care');
   if (!section) return;
@@ -37,7 +37,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   section.querySelector('[data-care-next]').addEventListener('click', () => show(current + 1));
 })();
 
-/* FAQ — accordeon : une seule reponse ouverte a la fois */
+/* FAQ : accordeon : une seule reponse ouverte a la fois */
 (() => {
   const list = document.querySelector('[data-faq]');
   if (!list) return;
@@ -51,7 +51,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   });
 })();
 
-/* Menu mobile — ouverture / fermeture */
+/* Menu mobile : ouverture / fermeture */
 (() => {
   const burger = document.querySelector('.burger');
   const menu   = document.querySelector('.menu');
@@ -75,7 +75,7 @@ document.querySelectorAll('[data-year]').forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
-/* Blog — filtre par categorie */
+/* Blog : filtre par categorie */
 (() => {
   const grid = document.querySelector('[data-posts]');
   if (!grid) return;
@@ -101,7 +101,7 @@ document.querySelectorAll('[data-year]').forEach((el) => {
   });
 })();
 
-/* Menu "Soins" — ouverture au clic sur mobile, fermeture au clic exterieur */
+/* Menu "Soins" : ouverture au clic sur mobile, fermeture au clic exterieur */
 (() => {
   const parents = [...document.querySelectorAll('[data-sub]')];
   if (!parents.length) return;
