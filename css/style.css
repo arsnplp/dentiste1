@@ -285,7 +285,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 @media (max-width: 1024px) {
   .menu { display: none; }
   .burger { display: flex; }
-  .btn--primary { display: none; }
+  .nav .btn--primary { display: none; }   /* seulement le bouton de la barre de menu */
 }
 
 @media (max-width: 720px) {
@@ -2439,4 +2439,48 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 @media (max-width: 900px) {
   .sblock__inner { grid-template-columns: 1fr; }
   .sblock__side { position: static; }
+}
+
+/* ---------- 21. Logo centre dans le header ---------- */
+/* Le bloc nav devient une colonne : le logo occupe l'espace du haut,
+   la barre (identite / menu / bouton) reste collee en bas. */
+.nav {
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+}
+
+.nav__logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding-top: clamp(12px, 1.8vh, 22px);
+  align-self: center;
+}
+
+.nav__logo img {
+  display: block;
+  height: clamp(78px, 11vh, 124px);
+  width: auto;
+  transition: opacity .3s var(--ease);
+}
+
+.nav__logo:hover img { opacity: .85; }
+
+.nav__inner {
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .nav { height: auto; min-height: 0; }
+  .nav__logo { padding-top: 16px; }
+  .nav__logo img { height: 72px; }
+  .nav__inner { padding-top: 12px; padding-bottom: 16px; }
+}
+
+@media (max-width: 720px) {
+  .nav__logo img { height: 60px; }
 }
