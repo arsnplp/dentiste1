@@ -4,6 +4,12 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const slides = track.children.length;
   let index = 0;
 
+  // une seule photo : les fleches sont masquees (voir .is-single en CSS)
+  if (slides <= 1) {
+    carousel.classList.add('is-single');
+    return;
+  }
+
   const render = () => {
     track.style.transform = `translateX(${-index * 100}%)`;
   };
