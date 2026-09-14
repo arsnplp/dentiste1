@@ -219,26 +219,16 @@
     </div>
   </header>
 
-  <!-- ============ 3. BANDEAU A ============ -->
-  <section class="band band--a">
-    <div class="band__inner">
-      <span class="band__index">01</span>
-      <div class="band__content">
-        <p class="eyebrow">Chirurgien-dentiste à Vitrolles (13127)</p>
-        <h1 class="band__title">Votre dentiste à Vitrolles</h1>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 4. BANDEAU B ============ -->
-  <section class="band band--b">
-    <div class="band__inner">
-      <span class="band__index">02</span>
-      <div class="band__content">
-        <p class="eyebrow">Soins, esthétique du sourire &amp; urgences</p>
-        <p class="band__title">Ouvert du lundi au samedi</p>
-      </div>
-    </div>
+  <!-- ============ 3. IMAGE HEADER ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <!-- H1 conserve pour le SEO, visible uniquement par Google et les lecteurs d'ecran -->
+    <h1 id="hero-title" class="sr-only">Cabinet Dentaire Lumi — votre dentiste à Vitrolles (13127)</h1>
+    <picture class="hero__media">
+      <source srcset="/assets/img/cabinet-dentaire-lumi-vitrolles.webp" type="image/webp" />
+      <img src="/assets/img/cabinet-dentaire-lumi-vitrolles.jpg"
+           alt="Famille souriante aux dents saines — Cabinet Dentaire Lumi, dentiste à Vitrolles"
+           width="1448" height="1086" fetchpriority="high" decoding="async" />
+    </picture>
   </section>
 
   <!-- ============ 5. INTRODUCTION ============ -->

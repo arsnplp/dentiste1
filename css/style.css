@@ -23,7 +23,6 @@
   /* Dimensions structurelles */
   --h-topbar: 42px;                /* mini bandeau */
   --h-nav:    calc(25vh - var(--h-topbar));   /* barre menu ≈ 1/4 de l'écran */
-  --h-band:   calc((100vh - 25vh) / 2);       /* chaque bandeau = moitié du reste */
 
   --gutter: clamp(24px, 5vw, 72px);
   --ease: cubic-bezier(.22, .61, .36, 1);
@@ -215,54 +214,13 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   background: var(--c-ink);
 }
 
-/* ---------- 5. Bandeaux ---------- */
-.band {
-  height: var(--h-band);
-  min-height: 220px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.band--a {
-  background: var(--c-paper-alt);
-}
-
-.band--b {
-  background: var(--c-deep);
-  color: var(--c-paper);
-}
-
-.band__inner {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  display: flex;
-  align-items: baseline;
-  gap: clamp(20px, 4vw, 56px);
-}
-
-.band__index {
-  font-family: var(--f-body);
-  font-size: 15px;
-  letter-spacing: .18em;
-  opacity: .45;
-}
-
+/* ---------- Intitules en capitales (eyebrow) ---------- */
 .eyebrow {
   margin: 0 0 10px;
   font-size: 11px;
   letter-spacing: .26em;
   text-transform: uppercase;
   opacity: .6;
-}
-
-.band__title {
-  font-family: var(--f-title);
-  font-size: clamp(30px, 4.2vw, 58px);
-  line-height: 1.1;
-  font-weight: 400;
 }
 
 /* ---------- 6. Responsive ---------- */
@@ -276,7 +234,6 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   :root {
     --h-topbar: 38px;
     --h-nav: 76px;
-    --h-band: calc((100vh - var(--h-topbar) - var(--h-nav)) / 2);
   }
   .topbar__info li:not(:first-child),
   .topbar__sep { display: none; }
@@ -2465,4 +2422,32 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 @media (max-width: 720px) {
   .nav__logo img { height: 60px; }
+}
+
+/* ---------- 22. Image header ---------- */
+/* Remplace les deux bandeaux : occupe les 3/4 d'ecran sous le menu */
+.hero {
+  position: relative;
+  height: 75vh;
+  min-height: 420px;
+  max-height: 900px;
+  overflow: hidden;
+  background: var(--c-paper-alt);
+}
+
+.hero__media,
+.hero__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__media img {
+  object-fit: cover;
+  object-position: center 35%;   /* garde les tetes et les visages dans le cadre */
+}
+
+@media (max-width: 720px) {
+  .hero { height: 56vh; min-height: 300px; }
+  .hero__media img { object-position: 45% 70%; }
 }
