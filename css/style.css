@@ -7,14 +7,14 @@
 /* ---------- 1. Variables ---------- */
 :root {
   /* Palette */
-  --c-ink:        #12222b;   /* texte principal, bleu très profond */
-  --c-ink-soft:   #4a5f6a;   /* texte secondaire */
-  --c-deep:       #0e2a35;   /* fond sombre (topbar) */
+  --c-ink:        #2e2e2e;   /* texte principal : gris anthracite */
+  --c-ink-soft:   #5c5c5c;   /* texte secondaire : gris de la section cabinet */
+  --c-deep:       #5c5c5c;   /* fonds sombres : meme gris */
   --c-paper:      #fbfaf7;   /* blanc cassé */
   --c-paper-alt:  #f2efe9;   /* beige clair */
   --c-accent:     #98c4ff;   /* bleu ciel */
   --c-accent-dk:  #7fb2f5;   /* survol : meme bleu, un ton plus soutenu */
-  --c-line:       rgba(18, 34, 43, .10);
+  --c-line:       rgba(0, 0, 0, .10);
 
   /* Typographie */
   --f-title: "Cormorant Garamond", "Times New Roman", serif;
@@ -51,7 +51,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .topbar {
   height: var(--h-topbar);
   background: var(--c-deep);
-  color: rgba(255, 255, 255, .78);
+  color: rgba(255, 255, 255, .92);
   font-size: 12.5px;
   letter-spacing: .04em;
 }
@@ -75,7 +75,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .topbar__label {
-  color: rgba(255, 255, 255, .45);
+  color: rgba(255, 255, 255, .78);
   margin-right: 4px;
 }
 
@@ -351,12 +351,12 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 18px;
-  background: linear-gradient(160deg, #243740, #12222b);
+  background: linear-gradient(160deg, #7a7a7a, #5c5c5c);
   border-right: 1px solid rgba(255, 255, 255, .12);
 }
 
 .slide__half--after {
-  background: linear-gradient(160deg, #2c4a4a, #17353a);
+  background: linear-gradient(160deg, #8c8c8c, #6b6b6b);
   border-right: 0;
 }
 
@@ -364,7 +364,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   font-size: 11px;
   letter-spacing: .26em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .72);
+  color: rgba(255, 255, 255, .88);
 }
 
 .carousel__arrow {
@@ -933,7 +933,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   font-size: 11.5px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .78);
 }
 
 .hours__table {
@@ -948,7 +948,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   font-size: 10.5px;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .4);
+  color: rgba(255, 255, 255, .78);
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, .14);
 }
@@ -960,7 +960,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .hours__table td {
-  color: rgba(255, 255, 255, .72);
+  color: rgba(255, 255, 255, .88);
   white-space: nowrap;
 }
 
@@ -974,7 +974,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .hours__table tbody tr:last-child td { border-bottom: 0; }
 
 .hours__table .is-closed th,
-.hours__table .is-closed td { color: rgba(255, 255, 255, .35); }
+.hours__table .is-closed td { color: rgba(255, 255, 255, .78); }
 
 .hours__contact { margin-top: 28px; }
 
@@ -992,7 +992,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   margin: 12px 0 22px;
   font-size: 14px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, .62);
+  color: rgba(255, 255, 255, .88);
 }
 
 .hours .btn--primary { background: var(--c-accent); }
@@ -1002,7 +1002,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   margin: 16px 0 0;
   font-size: 12px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, .45);
+  color: rgba(255, 255, 255, .78);
 }
 
 @media (max-width: 980px) {
@@ -1281,7 +1281,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 /* ---------- 16. Footer ---------- */
 .footer {
   background: var(--c-deep);
-  color: rgba(255, 255, 255, .68);
+  color: rgba(255, 255, 255, .88);
   font-size: 14.5px;
   line-height: 1.75;
 }
@@ -1300,18 +1300,18 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 /* logo version claire */
 .brand--light .brand__name { color: #fff; }
-.brand--light .brand__sub  { color: rgba(255, 255, 255, .5); }
+.brand--light .brand__sub  { color: rgba(255, 255, 255, .78); }
 
 .footer__about {
   margin: 22px 0 14px;
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .88);
 }
 
 .footer__rpps {
   margin: 0;
   font-size: 12px;
   letter-spacing: .08em;
-  color: rgba(255, 255, 255, .38);
+  color: rgba(255, 255, 255, .78);
 }
 
 .footer__title {
@@ -1326,7 +1326,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 .footer__address {
   font-style: normal;
   margin: 0 0 14px;
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .88);
 }
 
 .footer__list {
@@ -1336,7 +1336,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .footer__list a {
-  color: rgba(255, 255, 255, .68);
+  color: rgba(255, 255, 255, .88);
   transition: color .25s var(--ease);
 }
 .footer__list a:hover { color: #fff; }
@@ -1345,7 +1345,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   margin: 16px 0 0;
   font-size: 12.5px;
   line-height: 1.65;
-  color: rgba(255, 255, 255, .4);
+  color: rgba(255, 255, 255, .78);
 }
 
 .footer__note--alert {
@@ -1361,18 +1361,18 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   display: flex;
   flex-wrap: wrap;
   gap: 4px 10px;
-  color: rgba(255, 255, 255, .68);
+  color: rgba(255, 255, 255, .88);
 }
 
 .footer__hours span {
   min-width: 110px;
-  color: rgba(255, 255, 255, .42);
+  color: rgba(255, 255, 255, .78);
   font-size: 12px;
   letter-spacing: .1em;
   text-transform: uppercase;
 }
 
-.footer__hours .is-closed { color: rgba(255, 255, 255, .32); }
+.footer__hours .is-closed { color: rgba(255, 255, 255, .78); }
 
 /* barre basse */
 .footer__bottom {
@@ -1389,7 +1389,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   justify-content: space-between;
   gap: 12px 28px;
   font-size: 12.5px;
-  color: rgba(255, 255, 255, .42);
+  color: rgba(255, 255, 255, .78);
 }
 
 .footer__copy { margin: 0; }
@@ -1402,7 +1402,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .footer__legal a {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .78);
   transition: color .25s var(--ease);
 }
 .footer__legal a:hover { color: #fff; }
@@ -1414,7 +1414,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .footer__credit a {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, .92);
   letter-spacing: .12em;
   text-transform: uppercase;
   font-size: 11.5px;
@@ -1513,7 +1513,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .way--primary { background: var(--c-paper-alt); }
-.way--alert   { background: var(--c-deep); color: rgba(255, 255, 255, .7); }
+.way--alert   { background: var(--c-deep); color: rgba(255, 255, 255, .88); }
 
 .way__index {
   font-family: var(--f-body);
@@ -1537,7 +1537,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   color: var(--c-ink-soft);
   flex: 1;
 }
-.way--alert .way__text { color: rgba(255, 255, 255, .62); }
+.way--alert .way__text { color: rgba(255, 255, 255, .88); }
 
 .way__btn { align-self: flex-start; }
 
@@ -1558,7 +1558,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   color: var(--c-ink-soft);
   opacity: .8;
 }
-.way--alert .way__note { color: rgba(255, 255, 255, .45); }
+.way--alert .way__note { color: rgba(255, 255, 255, .78); }
 .way--alert .way__note strong { color: var(--c-accent); font-weight: 400; }
 
 /* --- carte + itineraire --- */
@@ -1752,7 +1752,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   max-width: 52ch;
   font-size: 15.5px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, .62);
+  color: rgba(255, 255, 255, .88);
 }
 
 .cta__actions { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -1877,7 +1877,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   width: min(1040px, calc(100vw - 2 * var(--gutter)));
   background: var(--c-paper);
   border: 1px solid var(--c-line);
-  box-shadow: 0 24px 60px -30px rgba(18, 34, 43, .35);
+  box-shadow: 0 24px 60px -30px rgba(0, 0, 0, .25);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -2211,7 +2211,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .ba__head { text-align: center; margin-bottom: clamp(30px, 4vh, 48px); }
 
-.ba__head .eyebrow--rule { color: rgba(255, 255, 255, .8); }
+.ba__head .eyebrow--rule { color: rgba(255, 255, 255, .92); }
 .ba__head .eyebrow--rule::after { margin-left: auto; margin-right: auto; }
 
 .ba__title {
@@ -2226,7 +2226,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   max-width: 62ch;
   font-size: 15.5px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .88);
 }
 
 .ba .carousel__frame { outline-color: rgba(255, 255, 255, .3); }
@@ -2236,7 +2236,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   text-align: center;
   font-size: 12px;
   letter-spacing: .08em;
-  color: rgba(255, 255, 255, .38);
+  color: rgba(255, 255, 255, .78);
 }
 
 /* prise en charge */
@@ -2451,3 +2451,12 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   .hero { height: 56vh; min-height: 300px; }
   .hero__media img { object-position: 45% 70%; }
 }
+
+/* Footer : horaires lisibles (jour au-dessus, heures jamais coupees) */
+.footer__hours li {
+  display: block;
+  white-space: nowrap;
+}
+.footer__hours span { display: block; min-width: 0; margin-bottom: 2px; }
+.footer__hours span:empty { display: none; }
+.footer__hours li + li:not(.is-closed) { margin-top: -4px; }
