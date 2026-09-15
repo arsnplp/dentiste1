@@ -2614,3 +2614,18 @@ picture.portrait__img img {
   object-fit: cover;
   object-position: center 18%;   /* visage toujours dans le cadre */
 }
+
+/* Nos soins : vraies photos dans le cadre 16/10 de chaque onglet */
+picture.care__media {
+  display: block;
+  overflow: hidden;
+  background: var(--c-paper-alt);
+}
+
+picture.care__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
