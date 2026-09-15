@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css?v=20260915020441" />
+  <link rel="stylesheet" href="/css/style.css?v=20260915021020" />
 
   <!-- Donnees structurees : cabinet dentaire (SEO local) -->
   <script type="application/ld+json">
@@ -520,7 +520,12 @@
 
       <div class="about__portrait">
         <figure class="portrait">
-          <div class="portrait__img" role="img" aria-label="Dr Laura Azamoum, chirurgien-dentiste à Vitrolles"></div>
+          <picture class="portrait__img">
+            <source srcset="/assets/img/dr-laura-azamoum-dentiste-vitrolles.webp" type="image/webp" />
+            <img src="/assets/img/dr-laura-azamoum-dentiste-vitrolles.jpg"
+                 alt="Dr Laura Azamoum, chirurgien-dentiste à Vitrolles, dans son cabinet dentaire"
+                 width="900" height="1200" loading="lazy" decoding="async" />
+          </picture>
           <figcaption class="portrait__caption">
             <span class="portrait__name">Dr Laura Azamoum</span>
             <span class="portrait__role">Chirurgien-dentiste, RPPS 10101866340</span>
@@ -847,6 +852,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20260915020441"></script>
+  <script src="/js/main.js?v=20260915021020"></script>
 </body>
 </html>

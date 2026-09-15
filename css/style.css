@@ -2598,3 +2598,19 @@ picture.post__media img {
 }
 
 .post:hover picture.post__media img { transform: scale(1.03); }
+
+/* Qui suis-je : vraie photo du portrait */
+picture.portrait__img {
+  display: block;
+  position: relative;
+  z-index: 1;          /* au-dessus du filet decale */
+  overflow: hidden;
+}
+
+picture.portrait__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;   /* visage toujours dans le cadre */
+}
