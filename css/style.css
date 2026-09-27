@@ -2629,3 +2629,16 @@ picture.care__media img {
   object-fit: cover;
   object-position: center;
 }
+
+/* Numeros de telephone : jamais coupes en deux lignes */
+.hours__phone,
+.way__phone,
+.topbar__contact a,
+.footer__list a[href^="tel"],
+.faq__lead a[href^="tel"],
+.alert__note a[href^="tel"] {
+  white-space: nowrap;
+}
+
+/* le numero du bloc horaires s'adapte a la largeur de sa colonne */
+.hours__phone { font-size: clamp(23px, 2.1vw, 30px); }
