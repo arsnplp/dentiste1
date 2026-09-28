@@ -13,8 +13,16 @@
   --c-paper:      #ffffff;   /* blanc */
   --c-paper-alt:  #e6e6e6;   /* gris clair */
   --c-rose:       #ffdbe9;   /* rose (palette, pas encore utilise) */
-  --c-accent:     #98c4ff;   /* bleu ciel */
-  --c-accent-dk:  #7fb2f5;   /* survol : meme bleu, un ton plus soutenu */
+  /* --- Couleur d'accent : DORE (active) --- */
+  --c-accent:     #c5a253;   /* dore */
+  --c-accent-dk:  #a8863c;   /* survol : meme dore, plus soutenu */
+
+  /* --- Couleur d'accent : BLEU CIEL (mise de cote) ---
+     Pour revenir au bleu : commenter les deux lignes dorees ci-dessus
+     et decommenter les deux lignes ci-dessous.
+  --c-accent:     #98c4ff;
+  --c-accent-dk:  #7fb2f5;
+  --- fin de la palette bleue --- */
   --c-line:       rgba(0, 0, 0, .10);
 
   /* Typographie */
