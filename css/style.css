@@ -2691,3 +2691,14 @@ picture.care__media img {
 .ba__lead { font-size: 14.5px; max-width: 58ch; }
 
 .ba__note { margin-top: 16px; font-size: 11.5px; }
+
+/* Galerie de l'accueil : photo plus petite, comme sur les pages de soin */
+@media (min-width: 981px) {
+  .gallery__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: clamp(32px, 4vw, 56px);
+  }
+}
+
+.gallery .carousel { max-width: 560px; }
+.gallery { padding: clamp(46px, 7vh, 86px) 0; }
