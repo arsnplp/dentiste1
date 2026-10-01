@@ -2670,3 +2670,24 @@ picture.care__media img {
 
 /* Galerie de l'accueil : colonne gauche (photo + mention) */
 .gallery__left { min-width: 0; }
+
+/* Sections avant / apres des pages de soin : plus compactes */
+.ba { padding: clamp(30px, 4.5vh, 52px) 0; }
+
+.ba__inner { max-width: 760px; }
+
+.ba .carousel {
+  max-width: 540px;
+  margin-inline: auto;
+}
+
+.ba__head { margin-bottom: clamp(20px, 3vh, 30px); }
+
+.ba__title {
+  font-size: clamp(23px, 2.4vw, 34px);
+  margin-bottom: 12px;
+}
+
+.ba__lead { font-size: 14.5px; max-width: 58ch; }
+
+.ba__note { margin-top: 16px; font-size: 11.5px; }
