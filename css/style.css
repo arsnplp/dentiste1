@@ -2651,6 +2651,22 @@ picture.care__media img {
 /* le numero du bloc horaires s'adapte a la largeur de sa colonne */
 .hours__phone { font-size: clamp(23px, 2.1vw, 30px); }
 
-/* Galerie de l'accueil : le cadre suit le format de la photo avant / apres
-   (3/2) pour ne rien rogner, notamment les mentions incrustees en bas. */
-.gallery .slide { aspect-ratio: 3 / 2; }
+/* Carrousels avant / apres : le cadre suit le format de chaque photo,
+   pour ne rien rogner, notamment les mentions AVANT / APRES incrustees. */
+.slide--photo,
+.gallery .slide--photo { aspect-ratio: auto; }
+
+.slide--photo picture,
+.slide--photo img { height: auto; }
+
+/* Galerie de l'accueil : mention sous la photo */
+.gallery__note {
+  margin: 12px 0 0;
+  font-size: 12px;
+  letter-spacing: .04em;
+  color: var(--c-ink-soft);
+  opacity: .85;
+}
+
+/* Galerie de l'accueil : colonne gauche (photo + mention) */
+.gallery__left { min-width: 0; }

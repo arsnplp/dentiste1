@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css?v=20261001020750" />
+  <link rel="stylesheet" href="/css/style.css?v=20261001031753" />
 
   <script type="application/ld+json">
   {
@@ -326,12 +326,10 @@
   <section class="ba" aria-labelledby="ba-title">
     <div class="ba__inner">
       <div class="ba__head">
-        <p class="eyebrow eyebrow--rule">Résultats</p>
-        <h2 id="ba-title" class="ba__title">Avant / après</h2>
+        <p class="eyebrow eyebrow--rule">Imagerie 3D</p>
+        <h2 id="ba-title" class="ba__title">L'examen en images</h2>
         <p class="ba__lead">
-          Quelques exemples de résultats obtenus au cabinet à Vitrolles. Chaque
-          situation clinique est différente : ces photographies illustrent une prise en
-          charge, elles ne constituent pas une promesse de résultat.
+          Le Cône Beam reconstruit votre mâchoire en trois dimensions : os, racines et nerfs sont visibles sous tous les angles, ce qu'une radiographie classique ne permet pas.
         </p>
       </div>
 
@@ -341,17 +339,12 @@
         </button>
         <div class="carousel__frame">
           <div class="carousel__track" data-track>
-            <figure class="slide">
-              <div class="slide__half"><span>Avant</span></div>
-              <div class="slide__half slide__half--after"><span>Après</span></div>
-            </figure>
-            <figure class="slide">
-              <div class="slide__half"><span>Avant</span></div>
-              <div class="slide__half slide__half--after"><span>Après</span></div>
-            </figure>
-            <figure class="slide">
-              <div class="slide__half"><span>Avant</span></div>
-              <div class="slide__half slide__half--after"><span>Après</span></div>
+            <figure class="slide slide--photo">
+              <picture>
+                <source srcset="/assets/img/avant-apres-cone-beam-radiographie.webp" type="image/webp" />
+                <img src="/assets/img/avant-apres-cone-beam-radiographie.jpg" alt="Reconstruction 3D d'une mâchoire obtenue avec l'examen Cône Beam"
+                     width="1536" height="1024" loading="lazy" decoding="async" />
+              </picture>
             </figure>
           </div>
         </div>
@@ -360,7 +353,7 @@
         </button>
       </div>
 
-      <p class="ba__note">Photographies publiées avec l'accord écrit des patients.</p>
+      <p class="ba__note">Image d'illustration du rendu obtenu avec un Cône Beam.</p>
     </div>
   </section>
 
@@ -573,6 +566,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20261001020750"></script>
+  <script src="/js/main.js?v=20261001031753"></script>
 </body>
 </html>
