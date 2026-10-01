@@ -2650,3 +2650,7 @@ picture.care__media img {
 
 /* le numero du bloc horaires s'adapte a la largeur de sa colonne */
 .hours__phone { font-size: clamp(23px, 2.1vw, 30px); }
+
+/* Galerie de l'accueil : le cadre suit le format de la photo avant / apres
+   (3/2) pour ne rien rogner, notamment les mentions incrustees en bas. */
+.gallery .slide { aspect-ratio: 3 / 2; }
