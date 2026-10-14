@@ -34,7 +34,10 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
 
   const show = (i) => {
     current = (i + tabs.length) % tabs.length;
-    tabs.forEach((t, n)   => t.classList.toggle('is-active', n === current));
+    tabs.forEach((t, n)   => {
+      t.classList.toggle('is-active', n === current);
+      t.setAttribute('aria-selected', String(n === current));
+    });
     panels.forEach((p, n) => p.classList.toggle('is-active', n === current));
   };
 
@@ -147,3 +150,19 @@ document.querySelectorAll('[data-year]').forEach((el) => {
     }
   });
 })();
+
+/* Carte Google Maps : chargee uniquement au clic du visiteur
+   (aucun cookie tiers depose avant cette action, pas de bandeau necessaire) */
+document.querySelectorAll('[data-map]').forEach((box) => {
+  const btn = box.querySelector('[data-map-load]');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.src = box.dataset.mapSrc;
+    frame.title = box.dataset.mapTitle || 'Carte';
+    frame.loading = 'lazy';
+    frame.referrerPolicy = 'no-referrer-when-downgrade';
+    box.replaceChildren(frame);
+    frame.focus();
+  });
+});

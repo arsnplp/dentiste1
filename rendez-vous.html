@@ -18,9 +18,6 @@
   <meta property="og:description" content="Réservation en ligne sur Doctolib ou au 04 42 09 89 44. Itinéraire, parking gratuit et horaires du cabinet." />
   <meta property="og:url" content="https://www.cabinet-dentaire-lumi.fr/rendez-vous.html" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css?v=20261001151334" />
 
   <script type="application/ld+json">
@@ -194,6 +191,10 @@
           Réserver sur Doctolib
         </a>
         <p class="way__note">Ouverture dans un nouvel onglet</p>
+        <p class="way__note">
+          Les informations saisies sur Doctolib servent uniquement à gérer votre
+          rendez-vous : <a href="/politique-confidentialite.html">en savoir plus</a>.
+        </p>
       </article>
 
       <article class="way">
@@ -279,12 +280,22 @@
         </ul>
       </div>
 
-      <div class="mapsec__map">
-        <iframe
-          title="Carte du Cabinet Dentaire Lumi, 201 route de la Seds, 13127 Vitrolles"
-          src="https://www.google.com/maps?q=201%20Route%20de%20la%20Seds%2C%2013127%20Vitrolles&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="mapsec__map" data-map
+           data-map-src="https://www.google.com/maps?q=201%20Route%20de%20la%20Seds%2C%2013127%20Vitrolles&amp;output=embed"
+           data-map-title="Carte du Cabinet Dentaire Lumi, 201 route de la Seds, 13127 Vitrolles">
+        <div class="mapsec__consent">
+          <p class="mapsec__consent-text">
+            La carte interactive est fournie par Google Maps, qui dépose des cookies
+            et collecte des données de navigation dès son affichage.
+          </p>
+          <button type="button" class="btn btn--primary" data-map-load>
+            Afficher la carte (Google Maps dépose des cookies)
+          </button>
+          <a class="mapsec__consent-link" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=201+route+de+la+Seds+13127+Vitrolles">
+            Ou ouvrir l'adresse dans Google Maps (nouvel onglet)
+          </a>
+        </div>
       </div>
 
     </div>
@@ -471,7 +482,8 @@
         <ul class="footer__legal">
           <li><a href="/mentions-legales.html">Mentions légales</a></li>
           <li><a href="/politique-confidentialite.html">Confidentialité</a></li>
-          <li class="footer__credit">Site réalisé par <a href="https://accolab.fr" rel="noopener">ACCO LAB</a></li>
+          <li><a href="/cgu.html">CGU</a></li>
+          <li class="footer__credit">Site réalisé par <a href="https://acco-lab.fr" rel="noopener">ACCO LAB</a></li>
         </ul>
       </div>
     </div>
