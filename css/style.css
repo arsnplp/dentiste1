@@ -58,10 +58,10 @@
   --c-paper-alt:  #e6e6e6;   /* gris clair */
   --c-rose:       #ffdbe9;   /* rose (palette, pas encore utilise) */
   /* --- Couleur d'accent : DORE (active) --- */
-  --c-accent:     #c5a253;   /* dore */
-  --c-accent-dk:  #a8863c;   /* survol : meme dore, plus soutenu */
+  --c-accent:     #d4a866;   /* dore chaud (meme teinte que le site Holeen Family) */
+  --c-accent-dk:  #8b5e1a;   /* dore profond : survol */
   /* Dore pour du TEXTE (contraste WCAG AA >= 4.5:1) */
-  --c-accent-text:  #8e7130; /* sur fond blanc */
+  --c-accent-text:  #8b5e1a; /* sur fond blanc : dore profond Holeen (5.5:1) */
   --c-accent-light: #e5d5b0; /* sur fond gris fonce (--c-deep) */
 
   /* --- Couleur d'accent : BLEU CIEL (mise de cote) ---
@@ -246,13 +246,26 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   transition: background .3s var(--ease), color .3s var(--ease), transform .3s var(--ease);
 }
 
+/* Bouton principal : contour dore, fond transparent ; l'aplat dore n'apparait qu'au survol */
 .btn--primary {
-  background: var(--c-accent);
+  background: transparent;
   color: var(--c-ink);
+  border: 1px solid var(--c-accent);
 }
 .btn--primary:hover {
-  background: var(--c-accent-dk);
+  background: var(--c-accent);
+  color: var(--c-ink);
   transform: translateY(-1px);
+}
+/* Sur les fonds sombres (horaires, bandeau d'appel, acces, avant/apres, pied de page) : texte blanc */
+.hours .btn--primary, .cta .btn--primary, .way .btn--primary, .ba .btn--primary, .footer .btn--primary, .topbar .btn--primary {
+  color: #fff;
+  border-color: var(--c-accent);
+}
+.way--primary .btn--primary { color: var(--c-ink); }
+.hours .btn--primary:hover, .cta .btn--primary:hover, .way .btn--primary:hover, .ba .btn--primary:hover, .footer .btn--primary:hover, .topbar .btn--primary:hover {
+  background: var(--c-accent);
+  color: var(--c-ink);
 }
 
 /* Burger (mobile) */
@@ -428,7 +441,8 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--c-accent);
+  background: transparent;
+  border: 1px solid var(--c-accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -436,7 +450,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .carousel__arrow:hover {
-  background: var(--c-accent-dk);
+  background: var(--c-accent);
   transform: scale(1.06);
 }
 
@@ -1051,8 +1065,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   color: rgba(255, 255, 255, .88);
 }
 
-.hours .btn--primary { background: var(--c-accent); }
-.hours .btn--primary:hover { background: #fff; color: var(--c-deep); }
+/* (bouton des horaires : contour dore, regle generale plus haut) */
 
 .hours__note {
   margin: 16px 0 0;
@@ -1259,7 +1272,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .qa summary::-webkit-details-marker { display: none; }
-.qa summary:hover { color: var(--c-accent); }
+.qa summary:hover { color: var(--c-accent-dk); }
 
 /* signe + / - */
 .qa summary::before,
@@ -1510,7 +1523,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 }
 
 .crumb a { transition: color .25s var(--ease); }
-.crumb a:hover { color: var(--c-accent); }
+.crumb a:hover { color: var(--c-accent-dk); }
 .crumb span[aria-hidden] { color: var(--c-line); }
 .crumb [aria-current] { color: var(--c-ink); }
 
@@ -1604,7 +1617,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   letter-spacing: .02em;
   transition: color .3s var(--ease);
 }
-.way__phone:hover { color: var(--c-accent); }
+.way__phone:hover { color: var(--c-accent-dk); }
 .way--alert .way__phone { color: #fff; }
 .way--alert .way__phone:hover { color: var(--c-accent); }
 
@@ -1667,7 +1680,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   transition: background .25s var(--ease), color .25s var(--ease);
 }
 .route:last-child { border-bottom: 0; }
-.route:hover { background: var(--c-paper-alt); color: var(--c-accent); }
+.route:hover { background: var(--c-paper-alt); color: var(--c-accent-dk); }
 
 .route__name {
   font-size: 13px;
@@ -1675,7 +1688,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   text-transform: uppercase;
 }
 
-.route__go { color: var(--c-accent); }
+.route__go { color: var(--c-accent-dk); }
 
 .access { display: flex; flex-direction: column; gap: 22px; }
 
@@ -2005,7 +2018,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
   font-size: 10.5px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--c-accent);
+  color: var(--c-accent-dk);
 }
 
 .submenu__col ul { display: flex; flex-direction: column; gap: 11px; }
@@ -2484,7 +2497,7 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 
 .nav__logo img {
   display: block;
-  height: clamp(78px, 11vh, 124px);
+  height: clamp(92px, 13vh, 140px);   /* logo rond : un peu plus grand que l'ancien logo horizontal */
   width: auto;
   transition: opacity .3s var(--ease);
 }
@@ -2499,12 +2512,12 @@ button { font: inherit; border: 0; background: none; cursor: pointer; }
 @media (max-width: 1024px) {
   .nav { height: auto; min-height: 0; }
   .nav__logo { padding-top: 16px; }
-  .nav__logo img { height: 72px; }
+  .nav__logo img { height: 84px; }
   .nav__inner { padding-top: 12px; padding-bottom: 16px; }
 }
 
 @media (max-width: 720px) {
-  .nav__logo img { height: 60px; }
+  .nav__logo img { height: 72px; }
 }
 
 /* ---------- 22. Image header ---------- */
